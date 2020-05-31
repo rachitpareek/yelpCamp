@@ -1,0 +1,31 @@
+<%- include("../partials/header") %>
+
+<!-- header is just a container, but has semantic meaning -->
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1><i class="fa fa-leaf" aria-hidden="true"></i> Welcome to YelpCamp!</h1>
+            <p>View our handpicked campgrounds from around the world</p>
+            <p><a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New Campground</a></p>
+        </div>
+    </header>
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campground) { %>
+            <!-- xs default is 12 units -->
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="<%= campground.image %>">
+                    <div class="caption">
+                        <h4><%= campground.name %></h4>
+                    </div>
+                    <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    
+</div>
+
+
+<%- include("../partials/footer") %>

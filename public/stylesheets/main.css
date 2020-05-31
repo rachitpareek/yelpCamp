@@ -1,0 +1,16 @@
+.thumbnail img {
+    width: 100%
+}
+
+.thumbnail {
+    padding: 0px !important;
+}
+
+.btn-primary {
+    margin-bottom: 10px !important;
+}
+
+#deleteForm {
+    /* don't need to make this for a container */
+    display: inline !important;
+}
